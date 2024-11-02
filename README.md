@@ -53,7 +53,11 @@ OSRM_GEOFABRIK_PATH=europe/germany/berlin-latest.osm.pbf
 ## File to modify to trigger OSRM reload when using command `start`
 OSRM_NOTIFY_FILEPATH=/data/osrm_notify.txt
 ```
-
+dont forget to do this command : 
+```shell
+sudo mkdir -p /srv/osrm-backend/data
+sudo chmod -R 777 /srv/osrm-backend/data
+```
 You can run `osrm-routed` in a detach mode by setting the command to `start`, and then use the file `$OSRM_NOTIFY_FILEPATH` to notify OSRM to restart.
 
 See **OSRM Backend** base image documentation for more details.
